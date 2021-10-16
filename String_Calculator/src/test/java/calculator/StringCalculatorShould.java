@@ -39,4 +39,12 @@ public class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(6, stringCalculator.add("1\n2,3"));
 	}
+	
+
+	// Case 6 String with n input , \n or , and starting with //[newDelimiter][newDelimiter]...\n[numers...]  as delimiter
+	@Test
+	public void string_with_n_number_and_custom_delimiters_should_return_number_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(3, stringCalculator.add("//;\n1;2"));
+	}
 }
