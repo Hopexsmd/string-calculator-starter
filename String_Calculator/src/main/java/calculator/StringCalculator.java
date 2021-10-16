@@ -1,6 +1,6 @@
 package calculator;
 
-class StringCalculator {
+public class StringCalculator {
 
     public int add(String input) {
     	
@@ -9,7 +9,19 @@ class StringCalculator {
 			 return 0;
 		}
     	
-        return 0;
+    	// Delimiters are collected into this
+    	StringBuilder delimiters = new StringBuilder();
+    	delimiters.append(',');
+    	
+    	// Numbers are extracted in String form  into numbers array
+    	String numbers[] = input.split("["+delimiters.toString()+"]+");
+    	
+    	// To calculate sum
+    	int sum = 0;
+    	for(String num : numbers)
+    		sum = sum + Integer.parseInt(num);
+    	
+        return sum;
     }
 
 }
