@@ -1,7 +1,5 @@
 package calculator;
 
-import java.util.Arrays;
-
 public class StringCalculator {
 
 	public int add(String input) {
@@ -28,6 +26,7 @@ public class StringCalculator {
 
 		// Numbers are extracted in String form into numbers array
 		// It can also handle delimiters with repeated pattern such as [*****],[%%%]...
+		// It can also handle different delimiters such as [*][%]
 		String numbers[] = input.split("[" + delimiters.toString() + "]+");
 		
 		// To calculate sum

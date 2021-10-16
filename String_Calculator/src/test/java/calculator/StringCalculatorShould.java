@@ -57,7 +57,6 @@ public class StringCalculatorShould {
 
 	// Case 8 String with number bigger than 1000 should be ignored during sum
 	// calculation
-	//
 	@Test
 	public void string_with_number_bigger_than_thousand_should_return_number_ignoring_those() {
 		StringCalculator stringCalculator = new StringCalculator();
@@ -70,4 +69,12 @@ public class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(6, stringCalculator.add("//[***]\n1***2***3"));
 	}
+
+	// Case 10 String with custom delimiter with multiple delimiters should be handled
+	@Test
+	public void string_with_number_and_custom_multiple_delimiters_should_return_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(6, stringCalculator.add("//[*][%]\n1*2%3"));
+	}
+	
 }
