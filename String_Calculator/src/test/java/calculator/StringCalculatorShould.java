@@ -70,11 +70,20 @@ public class StringCalculatorShould {
 		assertEquals(6, stringCalculator.add("//[***]\n1***2***3"));
 	}
 
-	// Case 10 String with custom delimiter with multiple delimiters should be handled
+	// Case 10 String with custom delimiter with multiple delimiters should be
+	// handled
 	@Test
 	public void string_with_number_and_custom_multiple_delimiters_should_return_int() {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(6, stringCalculator.add("//[*][%]\n1*2%3"));
 	}
-	
+
+	// Case 11 String with custom delimiter with multiple delimiters should be of longer length
+	// handled
+	@Test
+	public void string_with_number_and_custom_multiple_delimiters_of_longer_length_should_return_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(11, stringCalculator.add("//[***][%][??]\n1***2%3??5"));
+	}
+
 }
