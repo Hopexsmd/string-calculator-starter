@@ -47,10 +47,19 @@ public class StringCalculatorShould {
 		assertEquals(3, stringCalculator.add("//;\n1;2"));
 	}
 
-	// Case 7 String with negative input should throw exception with all negative numbers printed 
+	// Case 7 String with negative input should throw exception with all negative
+	// numbers printed
 	@Test(expected = IllegalArgumentException.class)
-	public void string_with_negative_number_should_throw_excetion() {
+	public void string_with_negative_number_should_throw_IllegalArgumentException_excetion() {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(3, stringCalculator.add("1,2,-4,5,-6"));
+	}
+
+	// Case 7 String with negative input should throw exception with all negative
+	// numbers printed
+	@Test
+	public void string_with_number_bigger_than_thousand_should_return_number_ignoring_those() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(1003, stringCalculator.add("1,1000,1001,2"));
 	}
 }

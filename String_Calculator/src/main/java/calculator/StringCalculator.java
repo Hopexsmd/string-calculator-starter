@@ -37,6 +37,9 @@ public class StringCalculator {
 				foundNeagtive = true;
 				continue;
 			}
+			if(Integer.parseInt(num) > 1000) {
+				continue;
+			}
 			sum = sum + Integer.parseInt(num);
 		}
 		if(foundNeagtive)
