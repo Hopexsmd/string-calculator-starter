@@ -17,7 +17,7 @@
   	e.g. input   --> "//[%]\n1%2%3"
 	     output  --> 6
          
-# Build using
+# Build using 
 * Java(1.8)
 * JUnit(4.13.2)
 * STS(eclipse)
