@@ -31,7 +31,6 @@ public class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(45, stringCalculator.add("1,2,3,4,5,6,7,8,9"));
 	}
-	
 
 	// Case 5 String with n input and \n or , as delimiter
 	@Test
@@ -39,12 +38,19 @@ public class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(6, stringCalculator.add("1\n2,3"));
 	}
-	
 
-	// Case 6 String with n input , \n or , and starting with //[newDelimiter][newDelimiter]...\n[numers...] as delimiter
+	// Case 6 String with n input , \n or , and starting with
+	// //[newDelimiter][newDelimiter]...\n[numers...] as delimiter
 	@Test
 	public void string_with_n_number_and_custom_delimiters_should_return_number_as_int() {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(3, stringCalculator.add("//;\n1;2"));
+	}
+
+	// Case 7 String with negative input should throw exception with all negative numbers printed 
+	@Test(expected = IllegalArgumentException.class)
+	public void string_with_negative_number_should_throw_excetion() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(3, stringCalculator.add("1,2,-4,5,-6"));
 	}
 }
