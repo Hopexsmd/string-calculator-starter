@@ -24,4 +24,11 @@ public class StringCalculatorShould {
 		StringCalculator stringCalculator = new StringCalculator();
 		assertEquals(3, stringCalculator.add("1,2"));
 	}
+
+	// Case 4 String with n input
+	@Test
+	public void string_with_n_number_should_return_number_as_int() {
+		StringCalculator stringCalculator = new StringCalculator();
+		assertEquals(45, stringCalculator.add("1,2,3,4,5,6,7,8,9"));
+	}
 }
