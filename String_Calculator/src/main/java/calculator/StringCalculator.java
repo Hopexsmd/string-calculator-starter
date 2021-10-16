@@ -12,6 +12,7 @@ public class StringCalculator {
     	// Delimiters are collected into this
     	StringBuilder delimiters = new StringBuilder();
     	delimiters.append(',');
+    	delimiters.append('\n');
     	
     	// Numbers are extracted in String form  into numbers array
     	String numbers[] = input.split("["+delimiters.toString()+"]+");
