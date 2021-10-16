@@ -55,8 +55,8 @@ public class StringCalculatorShould {
 		assertEquals(3, stringCalculator.add("1,2,-4,5,-6"));
 	}
 
-	// Case 7 String with negative input should throw exception with all negative
-	// numbers printed
+	// Case 8 String with number bigger than 1000 should be ignored during sum calculation 
+	// 
 	@Test
 	public void string_with_number_bigger_than_thousand_should_return_number_ignoring_those() {
 		StringCalculator stringCalculator = new StringCalculator();
